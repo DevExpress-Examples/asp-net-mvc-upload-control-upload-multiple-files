@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [HomeController.cs](./CS/Controllers/HomeController.cs) (VB: [HomeController.vb](./VB/Controllers/HomeController.vb))
+* [UploadControlValidationSettings.cs](./CS/Models/UploadControlValidationSettings.cs) (VB: [UploadControlValidationSettings.vb](./VB/Models/UploadControlValidationSettings.vb))
+* [Index.cshtml](./CS/Views/Home/Index.cshtml)
+<!-- default file list end -->
 # UploadControl - An example of use
 
 
