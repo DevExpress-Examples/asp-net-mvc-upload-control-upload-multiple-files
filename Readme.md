@@ -4,7 +4,7 @@
 <!-- default badges end -->
 # Upload Control for ASP.NET MVC - How to upload multiple files at once
 
-This example demonstrates how to enable drag-and-drop support in the [Upload Control](https://docs.devexpress.com/AspNetMvc/8977/components/file-management/file-upload) extension and allow users to upload multiple files at once. Once file upload completes, links to uploaded files appear in the [Round Pannel](https://docs.devexpress.com/AspNetMvc/8976/components/multi-use-site-extensions/roundpanel?p=netframework) below the Upload Control.
+This example demonstrates how to enable drag-and-drop support in the [Upload Control](https://docs.devexpress.com/AspNetMvc/8977/components/file-management/file-upload) extension and allow users to upload multiple files at once. After a user uploads files on the server, links to the uploaded files appear in the [Round Pannel](https://docs.devexpress.com/AspNetMvc/8976/components/multi-use-site-extensions/roundpanel?p=netframework) below the Upload Control.
 
 ![Upload Control](./images/uploadControl.gif "UploadControl")
 
@@ -46,7 +46,7 @@ Follow the steps below to allow users to upload multiple files and display links
     }).GetHtml()
     ```
 
-5. Call the [Html.BeginForm](https://learn.microsoft.com/en-us/dotnet/api/system.web.mvc.html.formextensions.beginform?view=aspnet-mvc-5.2#system-web-mvc-html-formextensions-beginform(system-web-mvc-htmlhelper-system-string-system-string)) method overload to wrap the Upload Control in the `<form>` HTML tag. Pass an action method name and a controller name to the `BeginForm` method to set the tag's action attribute:
+5. Call the [Html.BeginForm](https://learn.microsoft.com/en-us/dotnet/api/system.web.mvc.html.formextensions.beginform?view=aspnet-mvc-5.2#system-web-mvc-html-formextensions-beginform(system-web-mvc-htmlhelper-system-string-system-string)) method overload to wrap the Upload Control in the `<form>` HTML tag. To set the tag's action attribute, pass a name of an action method to the `BeginForm` method:
 
     ```razor
     @using (Html.BeginForm("UploadControlUpload", "Home")) {
@@ -56,7 +56,7 @@ Follow the steps below to allow users to upload multiple files and display links
     }
     ```
 
-6. In the action method, call the Upload Control's [GetUploadedFiles](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.UploadControlExtension.-l------------y-) method overload to get uploaded files and handle the server-side [FilesUploadComplete](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxUploadControl.FilesUploadComplete) event:
+6. In the action method, call the Upload Control's [GetUploadedFiles](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.UploadControlExtension.-l------------y-) method overload to get the uploaded files and handle the server-side [FilesUploadComplete](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxUploadControl.FilesUploadComplete) event:
 
     ```cs
     public ActionResult UploadControlUpload() {
@@ -67,7 +67,7 @@ Follow the steps below to allow users to upload multiple files and display links
         return null;
     }
     ```
-7. In the `FilesUploadComplete` event handler, save the uploaded files on the server. Write names of uploaded files and their URLs in a string. Assign this string to [CallbackData](https://docs.devexpress.com/AspNet/DevExpress.Web.FilesUploadCompleteEventArgs.CallbackData) event argument to pass the string to the client:
+7. In the `FilesUploadComplete` event handler, save the uploaded files on the server. Write names of uploaded files and their URLs in a string. Assign this string to the [CallbackData](https://docs.devexpress.com/AspNet/DevExpress.Web.FilesUploadCompleteEventArgs.CallbackData) event argument to pass the string to the client:
 
     ```cs
     public void UploadControl_FilesUploadComplete(object sender, FilesUploadCompleteEventArgs e) {
@@ -83,7 +83,7 @@ Follow the steps below to allow users to upload multiple files and display links
         }
     }
     ```
-8. Handle the Upload Control's client-side [FilesUploadComplete](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxUploadControl.FilesUploadComplete) event. The [callbackData](https://docs.devexpress.com/AspNet/js-ASPxClientUploadControlFilesUploadCompleteEventArgs.callbackData) event argument contains the string passed from the server. Get file names and URLs from the string and use them to display links to uploaded files in the round panel:
+8. Handle the Upload Control's client-side [FilesUploadComplete](https://docs.devexpress.com/AspNet/DevExpress.Web.ASPxUploadControl.FilesUploadComplete) event. The [callbackData](https://docs.devexpress.com/AspNet/js-ASPxClientUploadControlFilesUploadCompleteEventArgs.callbackData) event argument contains the string passed from the server. Get file names and URLs from the string and use them to display links to the uploaded files in the Round Panel:
 
     ```js
     function OnFilesUploadComplete(s, e) {
