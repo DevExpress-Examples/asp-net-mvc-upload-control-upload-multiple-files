@@ -2,7 +2,7 @@
 [![](https://img.shields.io/badge/Open_in_DevExpress_Support_Center-FF7200?style=flat-square&logo=DevExpress&logoColor=white)](https://supportcenter.devexpress.com/ticket/details/T227032)
 [![](https://img.shields.io/badge/📖_How_to_use_DevExpress_Examples-e9f6fc?style=flat-square)](https://docs.devexpress.com/GeneralInformation/403183)
 <!-- default badges end -->
-# Upload Control for ASP.NET MVC - How to upload multiple files at once
+# Upload Control for ASP.NET MVC - How to upload multiple files simultaneously
 
 This example demonstrates how to enable drag-and-drop support in the [Upload Control](https://docs.devexpress.com/AspNetMvc/8977/components/file-management/file-upload) extension and allow users to upload multiple files simultaneously. Once a user uploads files on the server, links to the uploaded files appear in the [Round Panel](https://docs.devexpress.com/AspNetMvc/8976/components/multi-use-site-extensions/roundpanel?p=netframework) below the Upload Control.
 
