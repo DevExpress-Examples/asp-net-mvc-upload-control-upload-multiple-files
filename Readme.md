@@ -31,7 +31,7 @@ Follow the steps below to allow users to upload multiple files and display links
     }).GetHtml()
     ```
 
-4. Configure settings of the Upload Control extension. Set the extension's [UploadMode](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.UploadControlSettings.UploadMode?p=netframework) property to [Advanced](https://docs.devexpress.com/AspNet/DevExpress.Web.UploadControlUploadMode) to enable advanced upload mode. To allow users to upload multiple files, set the [EnableMultiSelect](https://docs.devexpress.com/AspNet/DevExpress.Web.UploadAdvancedModeSettings.EnableMultiSelect?p=netframework) property to `true`. The [EnableDragAndDrop](https://docs.devexpress.com/AspNet/DevExpress.Web.UploadAdvancedModeSettings.EnableDragAndDrop) property specifies whether to enable drag-and-drop support.
+4. Configure settings of the Upload Control extension. Set the extension's [UploadMode](https://docs.devexpress.com/AspNetMvc/DevExpress.Web.Mvc.UploadControlSettings.UploadMode?p=netframework) property to [Advanced](https://docs.devexpress.com/AspNet/DevExpress.Web.UploadControlUploadMode) to enable advanced upload mode. To allow users to upload multiple files, set the [EnableMultiSelect](https://docs.devexpress.com/AspNet/DevExpress.Web.UploadAdvancedModeSettings.EnableMultiSelect?p=netframework) property to `true`. The [EnableDragAndDrop](https://docs.devexpress.com/AspNet/DevExpress.Web.UploadAdvancedModeSettings.EnableDragAndDrop) property specifies if drag-and-drop operations are enabled.
 
     ```razor
     @Html.DevExpress().UploadControl(settings => {
