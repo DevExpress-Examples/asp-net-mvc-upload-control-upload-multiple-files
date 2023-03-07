@@ -67,7 +67,7 @@ Follow the steps below to allow users to upload multiple files and display links
         return null;
     }
     ```
-7. In the `FilesUploadComplete` event handler, save the uploaded files on the server. Write names of uploaded files and their URLs in a string. Assign this string to the [CallbackData](https://docs.devexpress.com/AspNet/DevExpress.Web.FilesUploadCompleteEventArgs.CallbackData) event argument to pass the string to the client:
+7. In the `FilesUploadComplete` event handler, save the uploaded files on the server. Write names of uploaded files and their URLs to a string. Assign this string to the [CallbackData](https://docs.devexpress.com/AspNet/DevExpress.Web.FilesUploadCompleteEventArgs.CallbackData) event argument to pass the string to the client:
 
     ```cs
     public void UploadControl_FilesUploadComplete(object sender, FilesUploadCompleteEventArgs e) {
